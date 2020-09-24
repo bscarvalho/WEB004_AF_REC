@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastro de Clientes</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<script src="script_rec.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Cadastro de Clientes</h1>
+			<form class="row">
+				<div class="col-6">
+					<label>Nome:</label>
+					<input type="text" name="nome" class="form-control" />
+				</div>
+				<div class="col-6">
+					<label>Tipo:</label>
+					<select id="select" onchange="mudaTipo()" class="form-control" >
+						<option value=""></option>
+						<option value="pf">Pessoa Física</option>
+						<option value="pj">Pessoa Jurídica</option>
+					</select>
+					<div id="retorno"></div>
+				</div>
+				<div id="pessoafisica" style="" class="col-6">
+						<label for="cpf">CPF:</label>
+						<input id="cpf" type="text" name="cpf" class="form-control" />
+				</div>
+				<div id="pessoajuridica" style="" class="col-6">
+						<label for="cnpj">CNPJ:</label>
+						<input id="cnpj" type="text" name="cnpj" class="form-control" />
+				</div>
+			</form>
+			</br>
+			<table class="table table-striped">
+				<colgroup>
+					<col width="200">
+					<col width="200">
+					<col width="100">
+					<col width="100">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Cliente</th>
+						<th>CPF/CNPJ</th>
+						<th>Editar</th>
+						<th>Excluir</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Fulano da Silva</td>
+						<td>Construção de páginas Web</td>
+						<td>
+							<button class="btn btn-warning">Editar</button>
+						</td>
+						<td>
+							<button class="btn btn-danger">Excluir</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Ciclano Pereira</td>
+						<td>Algoritmos</td>
+						<td>
+							<button class="btn btn-warning">Editar</button>
+						</td>
+						<td>
+							<button class="btn btn-danger">Excluir</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
